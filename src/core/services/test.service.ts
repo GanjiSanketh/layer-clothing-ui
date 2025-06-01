@@ -13,6 +13,6 @@ export class TestService {
 
   testApiInformation(): Observable<any> {
     debugger;
-    return this.http.get(`${this.apiUrl}/ProductInformation/testApiInformation`);
+    return this.http.get(`${this.apiUrl}/ProductInformation/GetActiveProductInformations`);
   }
 }

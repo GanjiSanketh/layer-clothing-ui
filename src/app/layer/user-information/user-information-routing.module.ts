@@ -4,18 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'user',
+    redirectTo: 'register',
     pathMatch: 'full'
   },
   {
-    path: 'user',
+    path: 'register',
     loadChildren: () =>
-      import('./user-information/user-information.module').then(m => m.UserInformationModule),
+      import('./register-user/register-user.module').then(m => m.RegisterUserModule),
   },
   {
-    path: 'product-information',
+    path: 'login',
     loadChildren: () =>
-      import('./product-information/product-information.module').then(m => m.ProductInformationModule),
+      import('./login-user/login-user.module').then(m => m.LoginUserModule),
   },
 ];
 
@@ -23,4 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LayerRoutingModule { }
+export class UserInformationRoutingModule { }

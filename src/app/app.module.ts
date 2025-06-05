@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestService } from '../core/services/test.service';
 import { CommonModule } from '@angular/common';
-
-// Import other components/modules as needed
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    
-    // add other components here
+    AppComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule
+    RouterModule,
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [TestService, HttpClient],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
